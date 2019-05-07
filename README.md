@@ -2,11 +2,11 @@
 ### Dockerfile
 <ol>
 Dockerfile uses to set the environment inside the individual container this file helps you to create an image and also install the software required by your application.</br>
-Dockerfile will set the base image and specify the necessary commands and instructions to build the Laravel application image.</br>
+Dockerfile will set the base image and specify the necessary commands and instructions to build the Laravel application image.</br></br>
 
 <li>first we create a base image of php7.2-fpm. This file also install prerequisite packages for Laravel: mcrypt, pdo_mysql, mbstring, and imagick with composer.</li>
 
-<strong>FROM php:7.2-fpm</strong></br>
+<strong>FROM php:7.2-fpm</strong></br></br>
 <li>The WORKDIR instruction specifies the /var/www directory as the working directory for the application.</li></br>
 
 <li>RUN cummand specify to update, install and configure settings inside the container</li> 
@@ -52,7 +52,7 @@ Dockerfile will set the base image and specify the necessary commands and instru
 </ol>
 
 <li>apt-get clean` and remove /var/cache/apt/lists </li>
-RUN apt-get clean && rm -rf /var/lib/apt/lists/*</br>
+<strong>RUN apt-get clean && rm -rf /var/lib/apt/lists/*</strong></br></br>
 
 <li>Install extensions</li>
 <ol>
@@ -63,20 +63,20 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/*</br>
 <li>Install PHP extensions with docker-php-ext-install</li>
 <strong>RUN docker-php-ext-install gd</strong>
 </ol>
-
+</br>
 <li>Creating a dedicated user and group with restricted permissions mitigates the inherent vulnerability when running Docker containers, which run by default as root. Instead of running this container as root we created the www user, who has read/write access to the /var/www folder.</li>
 
 <strong>RUN groupadd -g 1000 www</br>
-RUN useradd -u 1000 -ms /bin/bash -g www www</strong>
+RUN useradd -u 1000 -ms /bin/bash -g www www</strong></br>
 
 
 <li>COPY instruction that we are using with the --chown flag to copy the application folder's permissions.</li>
 
-<strong>COPY --chown=www:www . /var/www</strong></br>
+<strong>COPY --chown=www:www . /var/www</strong></br></br>
 
 <li>EXPOSE command exposes a port in the container, 9000, for the php-fpm server.</li>
 
-<strong>EXPOSE 9000<strong></br>
+<strong>EXPOSE 9000</strong></br></br>
 
 <li>CMD specifies the command that should run once the container is created. </br>
 Here, CMD specifies "php-fpm", which will start the server.</li>
