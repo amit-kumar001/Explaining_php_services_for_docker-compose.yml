@@ -89,8 +89,8 @@ Here, CMD specifies "php-fpm", which will start the server.</li>
 <li>Create local.ini file inside the php folder. this is the file that you bind-mounted to /usr/local/etc/php/conf.d/local.ini inside the container.</li>
 
 <strong>
-upload_max_filesize=40M
-post_max_size=40M</strong>
+upload_max_filesize=40M</br>
+post_max_size=40M</strong></br>
 
 
 <li>Upload_max_filesize and post_max_size directives set the maximum allowed size for uploaded files, and demonstrate(show round) how you can set php.ini configurations from your local.ini file. You can put any PHP-specific configuration that you want to override in the local.ini file.</li>
