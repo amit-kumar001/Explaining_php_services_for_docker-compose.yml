@@ -1,4 +1,7 @@
-# Explaining_php_services_for_docker-compose.yml
+# Explaining_php_services_for_docker-compose.yml    
+
+![Untitled-3](https://user-images.githubusercontent.com/47202519/57298449-dedc8780-70ef-11e9-8d8b-2b59647baec7.gif)
+
 ### Dockerfile
 <ol>
 Dockerfile uses to set the environment inside the individual container this file helps you to create an image and also install the software required by your application.</br>
