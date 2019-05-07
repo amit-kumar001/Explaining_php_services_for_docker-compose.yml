@@ -48,7 +48,7 @@ Dockerfile will set the base image and specify the necessary commands and instru
     <strong>git \</strong></br>
 
 <li>curl is a tool to transfer data from or to a server, using one of the supported protocols (HTTP, HTTPS, FTP, FTPS, SCP, SFTP, TFTP, DICT, TELNET, LDAP or FILE). The command is designed to work without user interaction.  </li>      
-    <strong>curl</strong></br>
+    <strong>curl</strong></br></br>
 </ol>
 
 <li>apt-get clean` and remove /var/cache/apt/lists </li>
