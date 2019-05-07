@@ -53,7 +53,7 @@ Dockerfile will set the base image and specify the necessary commands and instru
 
 <li>apt-get clean` and remove /var/cache/apt/lists </li>
 <strong>RUN apt-get clean && rm -rf /var/lib/apt/lists/*</strong></br></br>
-
+</strong>
 <li>Install extensions</li>
 <ol>
 <li>Docker-php-ext-install used to build extensions from code (and enable after), mostly used to install core extensions.</li>
@@ -86,11 +86,11 @@ Here, CMD specifies "php-fpm", which will start the server.</li>
 
 ###  PHP(volume)
 <ol>
-<li>Create local.ini file inside the php folder. this is the file that you bind-mounted to /usr/local/etc/php/conf.d/local.ini inside the container.</li>
+<li>Create local.ini file inside the php folder. this is the file that you bind-mounted to /usr/local/etc/php/conf.d/local.ini inside the container.</li></br>
 
 <strong>
 upload_max_filesize=40M</br>
-post_max_size=40M</strong></br>
+post_max_size=40M</strong></br></br>
 
 
 <li>Upload_max_filesize and post_max_size directives set the maximum allowed size for uploaded files, and demonstrate(show round) how you can set php.ini configurations from your local.ini file. You can put any PHP-specific configuration that you want to override in the local.ini file.</li>
