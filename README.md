@@ -7,9 +7,9 @@ Dockerfile will set the base image and specify the necessary commands and instru
 <li>first we create a base image of php7.2-fpm. This file also install prerequisite packages for Laravel: mcrypt, pdo_mysql, mbstring, and imagick with composer.</li>
 
 <strong>FROM php:7.2-fpm</strong></br>
-<li>The WORKDIR instruction specifies the /var/www directory as the working directory for the application.</li>
+<li>The WORKDIR instruction specifies the /var/www directory as the working directory for the application.</li></br>
 
-<li>RUN cummand specify to update, install and configure settings inside the container, including creating a dedicated user and group called www.</li> 
+<li>RUN cummand specify to update, install and configure settings inside the container</li> 
 <ol>
 <li>Use it to find and install new packages, upgrade packages</li>
 <strong>RUN apt-get update && apt-get install -y \</strong></br>
