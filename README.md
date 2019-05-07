@@ -4,7 +4,7 @@
 
 ### Dockerfile
 <ol>
-Dockerfile uses to set the environment inside the individual container this file helps you to create an image and also install the software required by your application.</br>
+Dockerfile uses to set the environment inside the individual container, this file helps you to create an image and also install the software required by your application.</br>
 Dockerfile will set the base image and specify the necessary commands and instructions to build the Laravel application image.</br></br>
 
 <li>first we create a base image of php7.2-fpm. This file also install prerequisite packages for Laravel: mcrypt, pdo_mysql, mbstring, and imagick with composer.</li>
@@ -29,7 +29,7 @@ Dockerfile will set the base image and specify the necessary commands and instru
 <li>The libjpeg-turbo JPEG library is a library for handling JPEG files.  </li>  
     <strong>libjpeg62-turbo-dev \</strong></br>
 
-<li>FreeType 2 font engine, development files. The FreeType project is a team of volunteers who develop free, portable and high-quality software solutions for digital typography. They specifically target embedded systems and focus on providing small, efficient and ubiquitous products.    <li>
+<li>FreeType 2 font engine, development files. The FreeType project is a team of volunteers who develop free, portable and high-quality software solutions for digital typography. They specifically target embedded systems and focus on providing small, efficient and ubiquitous products.    </li>
     <strong>libfreetype6-dev \</strong></br>
 
 <li>Locales affect user interface language, case mapping, collation (sorting), date and time formats, and number and currency formats.   </li> 
@@ -54,7 +54,7 @@ Dockerfile will set the base image and specify the necessary commands and instru
     <strong>curl</strong></br></br>
 </ol>
 
-<li>apt-get clean` and remove /var/cache/apt/lists </li>
+<li>apt-get clean and remove /var/cache/apt/lists </li>
 <strong>RUN apt-get clean && rm -rf /var/lib/apt/lists/*</strong></br></br>
 </strong>
 <li>Install extensions</li>
